@@ -5,10 +5,10 @@
 Clone repository:
 
 ```sh
-https://github.com/IvanSostarko/postscript-examples.git
+git clone https://github.com/IvanSostarko/postscript-examples.git
 ```
 
-Install GhostScript
+Download GhostScript
 ```sh
 http://www.ghostscript.com/download/
 ```
