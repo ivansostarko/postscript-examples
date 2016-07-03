@@ -1,0 +1,93 @@
+100 100 translate
+/grid {0.5 0.3 0 0 setcmykcolor 
+gsave
+2 setlinewidth 400 0 moveto 0 0 lineto 0 500 lineto stroke
+grestore
+gsave
+0.3 setlinewidth
+5 { 30 100 moveto 400 100 lineto stroke 0 100 translate } repeat
+grestore
+gsave
+0.3 setlinewidth
+4 { 100 20 moveto 100 500 lineto stroke 100 0 translate } repeat
+grestore
+gsave
+/tekst 3 string def /Helvetica findfont 10 scalefont setfont
+100 100 500 { /y exch def 5 y 2 sub moveto y tekst cvs show } for
+90 100 400 { /x exch def x 5 moveto x 10 add tekst cvs show } for
+grestore 
+0 setgray } bind def
+grid
+
+%Example 9
+
+%Curve
+0 1 0 0 setcmykcolor
+5 setlinewidth
+1 setlinecap
+[2 5]0 setdash
+150 50 moveto
+70 50 100 100 150 200 curveto %Curve left
+150 50 moveto
+230 50 200 100 150 200 curveto %Curve right
+stroke
+
+%Curve background
+1 0 1 0 setcmykcolor
+1 setlinewidth
+[]0 setdash
+150 50 moveto
+70 50 100 100 150 200 curveto %Curve left
+150 50 moveto
+230 50 200 100 150 200 curveto %Curve right
+fill
+
+%Rectangle
+0 1 1 0 setcmykcolor
+1 setlinewidth
+[] 0 setdash
+250 50 moveto
+0 150 rlineto
+150 0 rlineto
+0 -150 rlineto
+closepath
+fill
+
+%Right triangle
+1 1 0 0 setcmykcolor
+1 setlinewidth
+[]0 setdash
+400 100 moveto
+400 200 lineto
+300 200 lineto
+400 100 lineto
+fill
+
+%Right triangle border
+0 1 1 0 setcmykcolor
+1 setlinewidth
+[]0 setdash
+400 100 moveto
+400 200 lineto
+300 200 lineto
+400 100 lineto
+stroke
+
+%Arc
+0 1 1 0 setcmykcolor
+1 setlinewidth
+[]0 setdash
+303 103 95 90 0 arcn
+closepath
+stroke
+
+%Arc fill
+0 0 0 0 setcmykcolor
+1 setlinewidth
+[]0 setdash
+303 103 95 90 0 arcn
+closepath
+fill
+
+
+showpage
