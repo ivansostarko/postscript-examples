@@ -1,4 +1,4 @@
-# Example 3
+# Example 4
 
 ### PostScript Commands
 
@@ -11,4 +11,4 @@
   - setlinecap
 
 ### Preview
-![Example 4](https://github.com/IvanSostarko/postscript-examples/blob/master/Example4/Example4.jpg)
+![Example 4](https://github.com/IvanSostarko/postscript-examples/blob/master/Example04/Example4.jpg)

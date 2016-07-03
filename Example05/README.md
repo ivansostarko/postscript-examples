@@ -11,4 +11,4 @@
   - setlinecap
 
 ### Preview
-![Example 4](https://github.com/IvanSostarko/postscript-examples/blob/master/Example5/Example5.jpg)
+![Example 5](https://github.com/IvanSostarko/postscript-examples/blob/master/Example05/Example5.jpg)
