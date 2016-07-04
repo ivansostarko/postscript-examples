@@ -1,0 +1,51 @@
+100 100 translate
+/grid {0.5 0.3 0 0 setcmykcolor 
+gsave
+2 setlinewidth 400 0 moveto 0 0 lineto 0 500 lineto stroke
+grestore
+gsave
+0.3 setlinewidth
+5 { 30 100 moveto 400 100 lineto stroke 0 100 translate } repeat
+grestore
+gsave
+0.3 setlinewidth
+4 { 100 20 moveto 100 500 lineto stroke 100 0 translate } repeat
+grestore
+gsave
+/tekst 3 string def /Helvetica findfont 10 scalefont setfont
+100 100 500 { /y exch def 5 y 2 sub moveto y tekst cvs show } for
+90 100 400 { /x exch def x 5 moveto x 10 add tekst cvs show } for
+grestore 
+0 setgray } bind def
+grid
+
+%Example 17
+
+/triangle {100 0 rlineto -50 50 rlineto -50 -50 rlineto} def
+
+%First triangle
+gsave
+100 100 translate
+0 20 200 {
+/x exch def
+0 x 180 div 0 setrgbcolor
+0 x moveto
+triangle
+fill
+}for
+grestore
+
+%Second triangle
+gsave
+200 100 translate
+0 30 300 {
+/x exch def
+0 0 x 270 div setrgbcolor
+0 x moveto
+triangle
+fill
+}for
+grestore
+
+showpage
+
