@@ -1,0 +1,80 @@
+100 100 translate
+/grid {0.5 0.3 0 0 setcmykcolor 
+gsave
+2 setlinewidth 400 0 moveto 0 0 lineto 0 500 lineto stroke
+grestore
+gsave
+0.3 setlinewidth
+5 { 30 100 moveto 400 100 lineto stroke 0 100 translate } repeat
+grestore
+gsave
+0.3 setlinewidth
+4 { 100 20 moveto 100 500 lineto stroke 100 0 translate } repeat
+grestore
+gsave
+/tekst 3 string def /Helvetica findfont 10 scalefont setfont
+100 100 500 { /y exch def 5 y 2 sub moveto y tekst cvs show } for
+90 100 400 { /x exch def x 5 moveto x 10 add tekst cvs show } for
+grestore 
+0 setgray } bind def
+grid
+
+%Example 19
+/circle {40 0 360 arc closepath } def
+
+%RGB MIXING
+
+%Green to blue (cyan)
+/color1 {0 0.8 x 200 div setrgbcolor } def
+%Green to red (orange, yellow)
+/color2 {x 200 div 0.8 0 setrgbcolor} def
+%Red to green (yellow,orange)
+/color3 {1 x 200 div 0 setrgbcolor} def
+%Red to blue (purple, pinky)
+/color4 {1 0 x 200 div setrgbcolor} def
+%Blue to red (purple, pinky)
+/color5 {x 200 div 0 1 setrgbcolor} def
+%Blue to green (cyan)
+/color6 {0 x 200 div 1 setrgbcolor} def
+
+%CMYK MIXING
+%Magenta in Yellow (red)
+/color7 {0 1 x 200 div 0 setcmykcolor} def
+%Magenta in Cyan (blue)
+/color8 {x 200 div 1 0 0 setcmykcolor} def
+%Yellow to Magenta (red)
+/color9 {0 x 200 div 1 0 setcmykcolor} def
+%Yellow to Cyan (green)
+/color10 {x 200 div 0  1 0 setcmykcolor} def
+%Cyan to Magenta (blue)
+/color11 {1 x 200 div 0 0 setcmykcolor} def
+%Cyan to Yellow (green)
+/color12 {1 0 x 200 div 0 setcmykcolor} def
+
+gsave
+200 75 translate
+0 30 230 {
+/x exch def
+color1
+%color2
+%color3
+%color4
+%color5
+%color6
+%color7
+%color8
+%color9
+%color10
+%color11
+%color12
+0 x moveto
+1.050 1.05 scale
+0 x circle
+fill
+}for
+
+
+grestore
+
+showpage
+
