@@ -12,3 +12,5 @@ Download GhostScript
 ```sh
 http://www.ghostscript.com/download/
 ```
+
+Check examples here: https://ivansostarko.github.io/postscript-examples/
